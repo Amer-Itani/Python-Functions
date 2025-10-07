@@ -6,8 +6,7 @@ def factorial(n):
         for i in range(n, 1, -1):
             result *= i
         return result
-    else:
-        return
+    return
 
 def find_max(numbers):
     maximum = numbers[0]
@@ -20,3 +19,10 @@ def linear_search(numbers, target):
     if target in numbers:
         return True
     return False
+
+def fibonacci(n):
+    if n == 0 or n == 1:
+        return n
+    elif n > 1:
+        return fibonacci(n - 2) + fibonacci(n - 1)
+    return
