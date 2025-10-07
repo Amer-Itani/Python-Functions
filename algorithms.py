@@ -43,3 +43,39 @@ def iterative_fibonacci(n):
         result = third_number
         return result
     return
+
+logged_in = False
+
+while True:
+    choice = int(input("Enter your choice number: "))
+
+    if choice == 5:
+        username = input("Enter your username: ")
+        password = input("Enter your password: ")
+        if username == "root" and password == "pass":
+            logged_in = True
+        else:
+            logged_in = False
+
+    if logged_in:
+        if choice == 1:
+            number = int(input("Enter a number for factorial: "))
+            print(factorial(number))
+
+        elif choice == 2:
+            max_list = list(map(int, input("Enter your list to find the maximum in it: ").split()))
+            print(find_max(max_list))
+
+        elif choice == 3:
+            search_list = list(map(int, input("Enter your list to find a target in it: ").split()))
+            t = int(input("Enter your target to be searched for in the list: "))
+            print(linear_search(search_list, t))
+
+        elif choice == 4:
+            n = int(input("Enter your number to return the number in that position in the fibonacci sequence: "))
+            print(iterative_fibonacci(n))
+
+        elif choice == 6:
+            print("Program ended.")
+            break
+
