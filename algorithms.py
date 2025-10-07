@@ -8,3 +8,10 @@ def factorial(n):
         return result
     else:
         return
+
+def find_max(numbers):
+    maximum = numbers[0]
+    for i in range(1, len(numbers)):
+        if numbers[i] > maximum:
+            maximum = numbers[i]
+    return maximum
