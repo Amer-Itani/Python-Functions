@@ -15,3 +15,8 @@ def find_max(numbers):
         if numbers[i] > maximum:
             maximum = numbers[i]
     return maximum
+
+def linear_search(numbers, target):
+    if target in numbers:
+        return True
+    return False
